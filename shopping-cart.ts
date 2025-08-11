@@ -2,7 +2,7 @@ type OfferType = 'NONE' | 'BUY_ONE_GET_ONE_FREE' | 'THREE_FOR_TWO';
 
 interface Product {
   name: string;
-  price: number; // in pence
+  price: number;
   offer?: OfferType;
 }
 
@@ -62,23 +62,35 @@ const cart = new ShoppingCart(products);
 const basket = ['Apple', 'Apple', 'Banana', 'Melon', 'Melon', 'Lime', 'Lime', 'Lime'];
 const total = cart.calculateTotal(basket);
 
-console.log(`Total: ${total}p`);
+console.log(`Basket Total: ${total}p`);
 
 //test input 2
 const basket1 =  ['Apple', 'Banana', 'Melon', 'Melon', 'Lime', 'Lime', 'Lime'];
 const total1 = cart.calculateTotal(basket1);
 
-console.log(`Total: ${total1}p`);
+console.log(`Basket1 Total: ${total1}p`);
 
 //test input 3
 const basket2 = ['Apple', 'Banana', 'Melon', 'Melon', 'Lime'];
 const total2 = cart.calculateTotal(basket2);
 
-console.log(`Total: ${total2}p`);
+console.log(`Basket2 Total: ${total2}p`);
 
 
 //test input 4
 const basket3 = ['Apple', 'Apple', 'Banana', 'Banana', 'Melon', 'Melon', 'Lime', 'Lime'];
 const total3 = cart.calculateTotal(basket3);
 
-console.log(`Total: ${total3}p`);
+console.log(`Basket3 Total: ${total3}p`);
+
+//test input 5
+const basket4 = ['Lime', 'Melon', 'Apple', 'Apple', 'Banana', 'Banana', 'Melon', 'Melon', 'Lime', 'Lime'];
+const total4 = cart.calculateTotal(basket4);
+
+console.log(`Basket4 Total: ${total4}p`);
+
+//test input 6
+const basket5 = ['Apple', 'Apple', 'Banana', 'Banana', 'Melon', 'Melon', 'Lime', 'Lime', 'Lime', 'Lime'];
+const total5 = cart.calculateTotal(basket5);
+
+console.log(`Basket5 Total: ${total5}p`);
